@@ -1,15 +1,20 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
 
-  constructor(private el: ElementRef) {}
+  @Input() defaultColor: string;
+  // tslint:disable-next-line:no-input-rename
+  @Input('appHighlight') highlightColor: string;
+
+  constructor(private el: ElementRef) {
+  }
 
   @HostListener('mouseenter')
   onMouseEnter() {
-    this.highlight('yellow');
+    this.highlight(this.highlightColor || this.defaultColor || 'red');
   }
 
   @HostListener('mouseleave')
@@ -18,6 +23,7 @@ export class HighlightDirective {
   }
 
   private highlight(color: string) {
+    console.log(color);
     this.el.nativeElement.style.backgroundColor = color;
   }
 
