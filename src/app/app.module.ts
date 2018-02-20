@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { HeroComponent } from './hero/hero.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    HeroComponent
   ],
   imports: [
     BrowserModule
