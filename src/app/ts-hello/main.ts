@@ -1,4 +1,6 @@
-
-enum Color { Green = 0, Red = 1, Black = 2 };
-let backgroundColor = Color.Green;
-console.log(backgroundColor);
+let message;
+message = 'abc';
+let endWithC = (<string>message).endsWith('c');
+console.log(endWithC);
+let alternativeWay = (message as string).endsWith('c');
+console.log(alternativeWay);
