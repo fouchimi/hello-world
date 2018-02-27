@@ -1,6 +1,6 @@
-var message;
-message = 'abc';
-var endWithC = message.endsWith('c');
-console.log(endWithC);
-var alternativeWay = message.endsWith('c');
-console.log(alternativeWay);
+var log = function (message) {
+    console.log(message);
+};
+// tslint:disable-next-line:eofline
+log('Hi There');
+var doLog = function (message) { return console.log(message); };
