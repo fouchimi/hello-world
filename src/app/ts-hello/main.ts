@@ -1,14 +1,16 @@
 class Point {
-    private x: number;
-    private y: number;
-
-    constructor(x?: number, y?: number) {
-        this.x = x;
-        this.y = y;
-    }
+    constructor(private x?: number, private y?: number) {}
 
     draw() {
         console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+    set setX(val) {
+        this.x = val;
+    }
+
+    get getX() {
+        return this.x;
     }
 
     getDistance(another: Point) {
@@ -18,7 +20,9 @@ class Point {
 
 let pointA: Point = new Point(4, 5);
 let pointB: Point = new Point(2, 1);
+console.log(pointA.getX);
+pointA.setX = 5;
 
 pointA.draw();
 
-console.log(pointA.getDistance(pointB));
+console.log('The distance is: ' + pointA.getDistance(pointB));
