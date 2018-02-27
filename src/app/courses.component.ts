@@ -7,7 +7,8 @@ import { CoursesService } from './courses.service';
    template: `<h2>{{ title }}</h2><br/>
                 <ul *ngFor="let course of courses">
                   <li>{{ course }}</li>
-                </ul>`
+                </ul>
+                <button class="btn btn-primary">Save</button>`
 })
 export class CoursesComponent {
     title = 'List of courses';
