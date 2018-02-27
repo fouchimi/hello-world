@@ -25,4 +25,15 @@ export class HeroComponent implements OnInit {
   ngOnInit() {
   }
 
+  callPhone(phoneNumber) {
+    console.log(phoneNumber);
+  }
+
+  deleteHero(hero) {
+    this.heroes.splice(this.heroes.indexOf(hero.name), 1);
+  }
+
+  trackByHeroes(index: number, hero: Hero): number {
+    return hero.id;
+  }
 }
