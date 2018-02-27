@@ -12,7 +12,7 @@ import { CoursesService } from './courses.service';
                    <button (click)="onSave($event)" class="btn btn-primary">Save</button>
                 </div><br/>
                 <div>
-                   <input type="text" placeholder="Enter text here" (keyup.enter)="onKeyUp()" />
+                   <input type="text" #email placeholder="Enter text here" (keyup.enter)="onKeyUp(email.value)" />
                 </div>`
 })
 export class CoursesComponent {
@@ -32,7 +32,9 @@ export class CoursesComponent {
         console.log('The button was clicked ' + $event);
     }
 
-    onKeyUp() {
+    onKeyUp(email) {
         console.log('You press the Enter key!');
+        console.log(email);
+        email = '';
     }
 }
