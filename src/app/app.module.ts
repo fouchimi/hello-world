@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { HeroComponent } from './hero/hero.component';
 import { CoursesComponent } from './courses.component';
+import { CoursesService } from './courses.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { CoursesComponent } from './courses.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
