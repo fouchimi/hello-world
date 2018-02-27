@@ -1,8 +1,12 @@
-let log = function(message) {
-  console.log(message);
+interface Point {
+    // tslint:disable-next-line:semicolon
+    x: number,
+    // tslint:disable-next-line:semicolon
+    y: number
+}
+
+let drawPoint = (point: Point) => {
+    console.log('x axis value:' + point.x);
 };
 
-// tslint:disable-next-line:eofline
-log('Hi There');
-
-let doLog = (message) => console.log(message);
+drawPoint({x: 1,  y: 2});
