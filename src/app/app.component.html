@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <courses></courses>
 <app-hero></app-hero>
-<app-favorite [is-favorite]="post.isFavorite"></app-favorite>
+<app-favorite [is-favorite]="post.isFavorite" (change)="favoriteChanged()"></app-favorite>
 <div>
   <input type="radio" name="colors" (click)="color='lightgreen'">Green
   <input type="radio" name="colors" (click)="color='yellow'">Yellow

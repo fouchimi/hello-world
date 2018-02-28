@@ -12,4 +12,8 @@ export class AppComponent {
     title: 'Title',
     isFavorite: true
   };
+
+  favoriteChanged() {
+    console.log('Favorite value changed!');
+  }
 }
