@@ -8,6 +8,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { HeroComponent } from './hero/hero.component';
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CoursesService } from './courses.service';
     AppComponent,
     HighlightDirective,
     HeroComponent,
-    CoursesComponent
+    CoursesComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
